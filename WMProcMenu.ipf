@@ -401,7 +401,7 @@ End
 // WaveMatricsFiles
 strconstant tmpPath = "WaveMetricsProceduresTmpPath"
 
-Function/WAVE WaveMetricsProcedures()
+static Function/WAVE WaveMetricsProcedures()
 	PathInfo Igor
 	if(V_Flag==0)
 		Make/FREE/T/N=0 w; return w
@@ -422,7 +422,7 @@ Function/WAVE WaveMetricsProcedures()
 	Sort buf,buf
 	return buf
 End
-Function/WAVE DirectoryRec(fullPath)
+static Function/WAVE DirectoryRec(fullPath)
 	String fullPath
 	NewPath/O/Q/Z $tmpPath fullPath
 	if(V_Flag)
